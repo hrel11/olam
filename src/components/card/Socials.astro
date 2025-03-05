@@ -1,0 +1,26 @@
+---
+import BaseCard from "./BaseCard.astro";
+import SocialLink from "~/components/socials/SocialLink.astro";
+const { class: className, ...rest } = Astro.props;
+---
+
+<BaseCard class={`${className}`} {...rest}>
+  <section class="h-full flex p-4 bg-gray-300/80 rounded-2xl">
+    <ul class="flex flex-wrap lg:flex-col lg:grow gap-2 [&>li]:lg:w-full">
+      <li>
+        <SocialLink
+          href="https://github.com/hrel11"
+          title="GitHub"
+          bgClassName="bg-gray-800"
+        />
+      </li>
+      <li>
+        <SocialLink
+          href="https://qiita.com/hrel11"
+          title="Qiita"
+          bgClassName="bg-qiita"
+        />
+      </li>
+    </ul>
+  </section>
+</BaseCard>

@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("/fonts/Noto_Sans_JP/static/NotoSansJP-Bold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("/fonts/Noto_Sans_JP/static/NotoSansJP-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Noto Sans JP";
+  color: var(--color-main);
+}
+
+.bg-src-pages {
+  background: linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
+    linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
+}
+
+.bg-bronze {
+  background: linear-gradient(135deg, #f3cfb8, #a57e65);
+}
+
+.bg-silver {
+  background: linear-gradient(135deg, #fff, #9da6bc);
+}
+
+.bg-gold {
+  background: linear-gradient(135deg, #fdf4d9, #e3b844);
+}
+
+.bg-rainbow {
+  background: linear-gradient(
+    135deg,
+    #fba1ea,
+    #d45afb 30%,
+    #7ea5fa 50%,
+    #4be8fa,
+    #76fbc5 70%,
+    #dafe5b
+  );
+}
+
+@theme {
+  --color-main: #3b3b3b;
+  --color-qiita: #479209;
+}

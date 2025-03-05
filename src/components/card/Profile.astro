@@ -1,0 +1,36 @@
+---
+import BaseCard from "./BaseCard.astro";
+import { getExperiences } from "~/utils/microcms";
+import { loadJST } from "~/utils/date";
+import type { Institution } from "~/types/types";
+
+const { class: className, ...rest } = Astro.props;
+const experiences: Institution[] = await getExperiences();
+---
+
+<BaseCard class={`${className}`} {...rest}>
+  <section class="flex flex-col gap-4 h-full justify-between">
+    <p>都内で働くフロントエンドエンジニア</p>
+    <div class="relative">
+      <div
+        class="h-full before:left-0 before:absolute before:block before:bg-[linear-gradient(180deg,_#b9e3ed_75%,_#a7a1ff)] before:w-[8px] before:h-full before:content-[''] before:rounded-full"
+      >
+        <ul
+          class="h-full pl-5 py-2 flex flex-col gap-4 justify-between [&>li]:relative [&>li]:before:left-[-24px] [&>li]:before:top-[5px] [&>li]:before:absolute [&>li]:before:block [&>li]:before:bg-blue-400 [&>li]:before:w-[16px] [&>li]:before:h-[16px] [&>li]:before:rounded-full"
+        >
+          {
+            experiences.map((exp): any => (
+              <li>
+                <p>{loadJST(exp.joinedAt)}</p>
+                <p>
+                  {exp.instName}{" "}
+                  {exp.instType.includes("企業") ? "入社" : "入学"}
+                </p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseCard>
