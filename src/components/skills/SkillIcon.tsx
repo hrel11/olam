@@ -1,5 +1,4 @@
 import React from "react";
-import { gsap } from "gsap";
 import { iconMap } from "~/components/iconMap";
 
 interface SkillProps {
