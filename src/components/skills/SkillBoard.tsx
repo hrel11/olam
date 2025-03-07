@@ -76,6 +76,7 @@ const SkillBoard: React.FC = () => {
           <SkillIcon alt="Storybook" rank="silver" showText={showText} />
           <SkillIcon alt="Jest" rank="silver" showText={showText} />
           <SkillIcon alt="Vitest" rank="silver" showText={showText} />
+          <SkillIcon alt="PHPUnit" rank="silver" showText={showText} />
           <SkillIcon alt="Postman" rank="silver" showText={showText} />
         </SkillFolder>
 

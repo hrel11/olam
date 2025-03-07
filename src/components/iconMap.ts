@@ -63,6 +63,7 @@ import Jest from "~/assets/skills/test/Jest.svg";
 import Postman from "~/assets/skills/test/Postman.svg";
 import Vitest from "~/assets/skills/test/Vitest-Dark.svg";
 import Storybook from "~/assets/skills/test/storybook.png";
+import PHPUnit from "~/assets/skills/test/phpunit.svg";
 
 import BitBucket from "~/assets/skills/vcs/BitBucket-Dark.svg";
 import Git from "~/assets/skills/vcs/Git.svg";
@@ -139,6 +140,7 @@ export const iconMap: { [key: string]: ImageMetadata } = {
   Postman: Postman,
   Vitest: Vitest,
   Storybook: Storybook,
+  PHPUnit: PHPUnit,
 
   BitBucket: BitBucket,
   Git: Git,
