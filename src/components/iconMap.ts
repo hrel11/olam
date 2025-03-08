@@ -43,6 +43,7 @@ import CS from "~/assets/skills/lang/CS.svg";
 import JQuery from "~/assets/skills/library/JQuery.svg";
 import MUI from "~/assets/skills/library/MaterialUI-Dark.svg";
 import React from "~/assets/skills/library/React-Dark.svg";
+import ReactHookForm from "~/assets/skills/library/react-hook-form.svg";
 import Redux from "~/assets/skills/library/Redux.svg";
 import ThreeJS from "~/assets/skills/library/ThreeJS-Dark.svg";
 import Vuetify from "~/assets/skills/library/Vuetify-Dark.svg";
@@ -120,6 +121,7 @@ export const iconMap: { [key: string]: ImageMetadata } = {
   jQuery: JQuery,
   MaterialUI: MUI,
   React: React,
+  'React Hook Form': ReactHookForm,
   Redux: Redux,
   ThreeJS: ThreeJS,
   Vuetify: Vuetify,

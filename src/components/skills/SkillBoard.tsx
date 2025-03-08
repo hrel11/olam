@@ -39,6 +39,7 @@ const SkillBoard: React.FC = () => {
 
         <SkillFolder title="ライブラリ">
           <SkillIcon alt="React" rank="gold" showText={showText} />
+          <SkillIcon alt="React Hook Form" rank="silver" showText={showText} />
           <SkillIcon alt="Redux" rank="silver" showText={showText} />
           <SkillIcon alt="Jotai" rank="silver" showText={showText} />
           <SkillIcon alt="Recoil" rank="silver" showText={showText} />
