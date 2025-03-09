@@ -1,8 +1,8 @@
 ---
-import SocialIcon from "~/components/socials/SocialIcon.astro";
+import SocialIcon from '~/components/socials/SocialIcon.astro';
 
 const { bgClassName, href, title, ...rest } = Astro.props;
-const bgClass = bgClassName || "bg-gray-600";
+const bgClass = bgClassName || 'bg-gray-600';
 ---
 
 <a
@@ -12,6 +12,6 @@ const bgClass = bgClassName || "bg-gray-600";
   rel="noopener noreferrer"
   target="_blank"
 >
-  <SocialIcon alt={title} class="border border-white size-9 rounded-[50%]" />
-  <span class="text-2xl text-white font-bold pr-1 truncate">{title}</span>
+  <SocialIcon alt={title} class="size-9 rounded-[50%] border border-white" />
+  <span class="truncate pr-1 text-2xl font-bold text-white">{title}</span>
 </a>

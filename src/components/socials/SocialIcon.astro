@@ -1,16 +1,16 @@
 ---
-import type { ImageMetadata } from "astro";
-import { Image, Picture } from "astro:assets";
-import { iconMap } from "~/components/iconMap";
+import type { ImageMetadata } from 'astro';
+import { Image, Picture } from 'astro:assets';
+import { iconMap } from '~/components/iconMap';
 
 const { class: className, alt, ...rest } = Astro.props;
 
 const loadExtension = (img: ImageMetadata | null) => {
   if (img) {
     const url = new URL(img.src, import.meta.url);
-    return url.pathname.split(".").pop();
+    return url.pathname.split('.').pop();
   }
-  return "";
+  return '';
 };
 
 const img = iconMap[alt] || null;
@@ -18,7 +18,7 @@ const extension = loadExtension(img);
 ---
 
 {
-  extension === "svg" ? (
+  extension === 'svg' ? (
     <Image
       class={`inline-block align-baseline ${className}`}
       loading="eager"
@@ -28,17 +28,15 @@ const extension = loadExtension(img);
     />
   ) : extension ? (
     <Picture
-      pictureAttributes={{class: `inline-block align-baseline`}}
+      pictureAttributes={{ class: `inline-block align-baseline` }}
       class={`${className}`}
       loading="eager"
       alt={`icon-${alt}`}
       src={img}
       width={50}
-      formats={["webp", "avif"]}
+      formats={['webp', 'avif']}
     />
   ) : (
-    <span
-      class={`inline-block bg-gray-500 opacity-50 rounded-full ${className}`}
-    />
+    <span class={`inline-block rounded-full bg-gray-500 opacity-50 ${className}`} />
   )
 }

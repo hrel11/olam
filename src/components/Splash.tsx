@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import gsap from "gsap";
-import splash from "~/assets/splash.svg";
+import React, { useState, useEffect } from 'react';
+import gsap from 'gsap';
+import splash from '~/assets/splash.svg';
 
 const Splash: React.FC = () => {
   const [loadedCount, setLoadedCount] = useState(0);
@@ -11,28 +11,27 @@ const Splash: React.FC = () => {
 
   const isReload = () => {
     const navigationEntries = performance.getEntriesByType(
-      "navigation"
+      'navigation'
     ) as PerformanceNavigationTiming[];
-    const navigationType =
-      navigationEntries.length > 0 ? navigationEntries[0].type : null;
-    return navigationType === "reload";
+    const navigationType = navigationEntries.length > 0 ? navigationEntries[0].type : null;
+    return navigationType === 'reload';
   };
 
   useEffect(() => {
     if (isReload()) {
-      sessionStorage.removeItem("animationShown");
-    } else if (sessionStorage.getItem("animationShown")) {
+      sessionStorage.removeItem('animationShown');
+    } else if (sessionStorage.getItem('animationShown')) {
       setShowAnimation(false);
       return;
     }
 
-    const images = document.querySelectorAll("img");
+    const images = document.querySelectorAll('img');
     setTotalImages(images.length);
     images.forEach((img) => {
       if (img.complete) {
         updateCount();
       } else {
-        img.addEventListener("load", () => {
+        img.addEventListener('load', () => {
           updateCount();
         });
       }
@@ -41,26 +40,23 @@ const Splash: React.FC = () => {
 
   useEffect(() => {
     gsap.registerEffect({
-      name: "fadeOutSplash",
+      name: 'fadeOutSplash',
       defaults: {
         onComplete: () => {},
       },
       extendTimeline: true,
-      effect: (
-        targets: gsap.TweenTarget,
-        config: { onComplete: () => void }
-      ) => {
+      effect: (targets: gsap.TweenTarget, config: { onComplete: () => void }) => {
         return gsap.to(targets, {
           opacity: 0,
-          ease: "power2.out",
+          ease: 'power2.out',
           duration: 0.75,
-          display: "none",
+          display: 'none',
           onComplete: config.onComplete,
         });
       },
     });
     gsap.registerEffect({
-      name: "yoyoDot",
+      name: 'yoyoDot',
       defaults: {
         delay: 0,
       },
@@ -70,7 +66,7 @@ const Splash: React.FC = () => {
           repeat: -1,
           yoyo: true,
           duration: 0.8,
-          ease: "power1.inOut",
+          ease: 'power1.inOut',
           delay: config.delay,
         });
       },
@@ -79,18 +75,18 @@ const Splash: React.FC = () => {
     const tl = gsap.timeline({ defaults: { duration: 1.75 } });
 
     if (!showAnimation) {
-      tl.to({}, { duration: 0.75 }).fadeOutSplash("#splash");
+      tl.to({}, { duration: 0.75 }).fadeOutSplash('#splash');
     } else if (loadedCount === totalImages && totalImages > 0) {
       tl.to({}, { duration: 1.0 })
-        .fadeOutSplash("#splash", {
+        .fadeOutSplash('#splash', {
           onComplete: () => {
-            sessionStorage.setItem("animationShown", "true");
+            sessionStorage.setItem('animationShown', 'true');
           },
         })
         .fromTo(
-          ["#profile", "#socials", "#skills"],
+          ['#profile', '#socials', '#skills'],
           { opacity: 0, x: 50 },
-          { opacity: 1, ease: "power2.out", x: 0, stagger: 0.5 }
+          { opacity: 1, ease: 'power2.out', x: 0, stagger: 0.5 }
         );
     }
   }, [showAnimation, loadedCount, totalImages]);
@@ -98,9 +94,9 @@ const Splash: React.FC = () => {
   return (
     <div
       id="splash"
-      className="bg-blue-100 fixed inset-0 w-full h-full z-9999 flex flex-col gap-6 justify-center items-center p-10"
+      className="fixed inset-0 z-9999 flex h-full w-full flex-col items-center justify-center gap-6 bg-blue-100 p-10"
     >
-      <p className="text-7xl select-none pointer-events-none">
+      <p className="pointer-events-none text-7xl select-none">
         <span id="splashTitle">
           <img src={splash.src} alt="hrel11 portfolio" />
         </span>

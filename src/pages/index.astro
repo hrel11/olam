@@ -1,10 +1,10 @@
 ---
-import Layout from "~/layouts/Layout.astro";
-import Profile from "~/components/card/Profile.astro";
-import Skills from "~/components/card/Skills.astro";
-import Socials from "~/components/card/Socials.astro";
-import Splash from "~/components/Splash";
-import background from "~/assets/background.svg";
+import Layout from '~/layouts/Layout.astro';
+import Profile from '~/components/card/Profile.astro';
+import Skills from '~/components/card/Skills.astro';
+import Socials from '~/components/card/Socials.astro';
+import Splash from '~/components/Splash';
+import background from '~/assets/background.svg';
 ---
 
 <Layout
@@ -13,31 +13,14 @@ import background from "~/assets/background.svg";
   class="bg-blue-100"
 >
   <Splash client:load />
-  <img
-    class="fixed inset-0 w-full h-full -z-1"
-    src={background.src}
-    alt=""
-    fetchpriority="high"
-  />
+  <img class="fixed inset-0 -z-1 h-full w-full" src={background.src} alt="" fetchpriority="high" />
   <main
-    class="overflow-x-hidden min-w-[330px] p-10 gap-10 m-auto max-w-6xl flex flex-col lg:grid lg:grid-cols-4 lg:grid-rows-3"
+    class="m-auto flex max-w-6xl min-w-[330px] flex-col gap-10 overflow-x-hidden p-10 lg:grid lg:grid-cols-4 lg:grid-rows-4"
   >
-    <Profile
-      id="profile"
-      title="M.K."
-      class="lg:col-start-1 lg:row-span-1 lg:col-span-3"
-    />
+    <Profile id="profile" title="M.K." class="lg:col-span-3 lg:col-start-1 lg:row-span-1" />
 
-    <Socials
-      id="socials"
-      title="リンク"
-      class="lg:col-start-4 lg:row-span-1 lg:col-span-1"
-    />
+    <Socials id="socials" title="リンク" class="lg:col-span-1 lg:col-start-4 lg:row-span-1" />
 
-    <Skills
-      id="skills"
-      title="スキルセット"
-      class="lg:row-start-2 lg:row-span-2 lg:col-span-4"
-    />
+    <Skills id="skills" title="スキルセット" class="h-fit lg:col-span-4 lg:row-span-3" />
   </main>
 </Layout>

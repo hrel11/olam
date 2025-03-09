@@ -1,15 +1,15 @@
 ---
-import BaseCard from "./BaseCard.astro";
+import BaseCard from './BaseCard.astro';
 const { class: className, ...rest } = Astro.props;
 ---
 
 <BaseCard class={`${className}`} {...rest}>
-  <section class="h-full relative">
+  <section class="relative h-full">
     <div
-      class="h-full before:left-0 before:absolute before:block before:bg-[linear-gradient(180deg,_#b9e3ed_75%,_#a7a1ff)] before:w-[8px] before:h-full before:content-[''] before:rounded-full"
+      class="h-full before:absolute before:left-0 before:block before:h-full before:w-[8px] before:rounded-full before:bg-[linear-gradient(180deg,_#b9e3ed_75%,_#a7a1ff)] before:content-['']"
     >
       <ul
-        class="h-full pl-5 py-2 flex flex-col gap-4 justify-between [&>li]:relative [&>li]:before:left-[-24px] [&>li]:before:top-[3px] [&>li]:before:absolute [&>li]:before:block [&>li]:before:bg-blue-400 [&>li]:before:w-[16px] [&>li]:before:h-[16px] [&>li]:before:rounded-full"
+        class="flex h-full flex-col justify-between gap-4 py-2 pl-5 [&>li]:relative [&>li]:before:absolute [&>li]:before:top-[3px] [&>li]:before:left-[-24px] [&>li]:before:block [&>li]:before:h-[16px] [&>li]:before:w-[16px] [&>li]:before:rounded-full [&>li]:before:bg-blue-400"
       >
         <li>
           <p>2016-04-01</p>

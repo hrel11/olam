@@ -6,7 +6,7 @@ export type Institution = {
   revisedAt: string;
   joinedAt: string;
   instName: string;
-  instType: ("企業" | "教育機関")[];
+  instType: ('企業' | '教育機関')[];
 };
 
 export type ExperienceResponse = {

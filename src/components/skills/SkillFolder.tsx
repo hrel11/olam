@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface SkillFolderProps {
   title: string;
@@ -7,11 +7,9 @@ interface SkillFolderProps {
 
 const SkillFolder: React.FC<SkillFolderProps> = ({ title, children }) => {
   return (
-    <div className="flex flex-col gap-2 p-4 bg-gray-300/80 rounded-2xl w-fit">
-      <h2 className="text-md font-bold px-6 rounded-full bg-gray-500 text-white w-fit">
-        {title}
-      </h2>
-      <ul className="flex gap-2 flex-wrap h-full items-center">{children}</ul>
+    <div className="flex w-fit flex-col gap-2 rounded-2xl bg-gray-300/80 p-4">
+      <h2 className="text-md w-fit rounded-full bg-gray-500 px-6 font-bold text-white">{title}</h2>
+      <ul className="flex h-full flex-wrap items-center gap-2">{children}</ul>
     </div>
   );
 };

@@ -1,18 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import background from "../assets/background.svg";
+import Layout from '../layouts/Layout.astro';
+import background from '../assets/background.svg';
 
 export const prerender = true;
 ---
 
 <Layout title="404 Not Found" description="ページが見つかりませんでした">
   <img
-    class="fixed inset-0 w-full h-full -z-10 blur-[100px]"
+    class="fixed inset-0 -z-10 h-full w-full blur-[100px]"
     src={background.src}
     alt=""
     fetchpriority="high"
   />
-  <main class="grid p-4 gap-3 m-auto max-w-6xl h-dvh place-content-center">
-    <div class="bg-white/50 p-4 shadow-xl rounded-xl">404 Not Found</div>
+  <main class="m-auto grid h-dvh max-w-6xl place-content-center gap-3 p-4">
+    <div class="rounded-xl bg-white/50 p-4 shadow-xl">404 Not Found</div>
   </main>
 </Layout>

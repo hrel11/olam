@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import SkillIcon from "~/components/skills/SkillIcon";
-import SkillFolder from "~/components/skills/SkillFolder";
-import ToggleSwitch from "~/components/ToggleSwitch";
+import React, { useState } from 'react';
+import SkillIcon from '~/components/skills/SkillIcon';
+import SkillFolder from '~/components/skills/SkillFolder';
+import ToggleSwitch from '~/components/ToggleSwitch';
 
 const SkillBoard: React.FC = () => {
   const [showText, setshowText] = useState(false);
@@ -12,7 +12,7 @@ const SkillBoard: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-4 [&>*]:self-start lg:[&>*]:self-auto">
-      <div className="flex flex-col lg:flex-row gap-4 [&>*]:self-start lg:justify-between">
+      <div className="flex flex-col gap-4 lg:flex-row lg:justify-between [&>*]:self-start">
         <p>
           経験値が多いほど枠線が豪華になります
           <br />
@@ -20,14 +20,12 @@ const SkillBoard: React.FC = () => {
         </p>
 
         <div className="flex items-center">
-          <p className="min-w-[8em] lg:text-right text-sm">
-            テキストを表示する
-          </p>
+          <p className="min-w-[8em] text-sm lg:text-right">テキストを表示する</p>
           <ToggleSwitch onToggle={toggleShowText} />
         </div>
       </div>
 
-      <section className="flex flex-wrap gap-6">
+      <section className="flex flex-wrap gap-3">
         <SkillFolder title="フレームワーク">
           <SkillIcon alt="Remix" rank="gold" showText={showText} />
           <SkillIcon alt="Next.js" rank="gold" showText={showText} />
