@@ -3,7 +3,7 @@ import type { ImageMetadata } from 'astro';
 import { Image, Picture } from 'astro:assets';
 import { iconMap } from '~/components/iconMap';
 
-const { class: className, alt, ...rest } = Astro.props;
+const { class: className, alt } = Astro.props;
 
 const loadExtension = (img: ImageMetadata | null) => {
   if (img) {
