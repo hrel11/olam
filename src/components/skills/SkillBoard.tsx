@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
-import SkillIcon from '~/components/skills/SkillIcon';
-import SkillFolder from '~/components/skills/SkillFolder';
-import ToggleSwitch from '~/components/ToggleSwitch';
+import React from 'react';
+import SkillIcon from './SkillIcon';
+import SkillFolder from './SkillFolder';
+import ToggleSwitchForSkillIcon from './ToggleSwitchForSkillIcon';
 
 const SkillBoard: React.FC = () => {
-  const [showText, setshowText] = useState(false);
-
-  const toggleShowText = () => {
-    setshowText(!showText);
-  };
-
   return (
     <div className="flex flex-col gap-4 [&>*]:self-start lg:[&>*]:self-auto">
       <div className="flex flex-col gap-4 lg:flex-row lg:justify-between [&>*]:self-start">
@@ -21,89 +15,89 @@ const SkillBoard: React.FC = () => {
 
         <div className="flex items-center">
           <p className="min-w-[8em] text-sm lg:text-right">テキストを表示する</p>
-          <ToggleSwitch onToggle={toggleShowText} />
+          <ToggleSwitchForSkillIcon />
         </div>
       </div>
 
       <section className="flex flex-wrap gap-3">
         <SkillFolder title="フレームワーク">
-          <SkillIcon alt="Remix" rank="gold" showText={showText} />
-          <SkillIcon alt="Next.js" rank="gold" showText={showText} />
-          <SkillIcon alt="Nuxt.js" rank="gold" showText={showText} />
-          <SkillIcon alt="Vue.js" rank="silver" showText={showText} />
-          <SkillIcon alt="Astro" rank="gold" showText={showText} />
-          <SkillIcon alt="Laravel" rank="gold" showText={showText} />
+          <SkillIcon alt="Remix" rank="gold" />
+          <SkillIcon alt="Next.js" rank="gold" />
+          <SkillIcon alt="Nuxt.js" rank="gold" />
+          <SkillIcon alt="Vue.js" rank="silver" />
+          <SkillIcon alt="Astro" rank="gold" />
+          <SkillIcon alt="Laravel" rank="gold" />
         </SkillFolder>
 
         <SkillFolder title="ライブラリ">
-          <SkillIcon alt="React" rank="gold" showText={showText} />
-          <SkillIcon alt="React Hook Form" rank="silver" showText={showText} />
-          <SkillIcon alt="Redux" rank="silver" showText={showText} />
-          <SkillIcon alt="Jotai" rank="silver" showText={showText} />
-          <SkillIcon alt="Recoil" rank="silver" showText={showText} />
-          <SkillIcon alt="GSAP" rank="silver" showText={showText} />
-          <SkillIcon alt="Motion" rank="bronze" showText={showText} />
-          <SkillIcon alt="MaterialUI" rank="bronze" showText={showText} />
-          <SkillIcon alt="Vuetify" rank="bronze" showText={showText} />
-          <SkillIcon alt="jQuery" rank="gold" showText={showText} />
+          <SkillIcon alt="React" rank="gold" />
+          <SkillIcon alt="React Hook Form" rank="silver" />
+          <SkillIcon alt="Redux" rank="silver" />
+          <SkillIcon alt="Jotai" rank="silver" />
+          <SkillIcon alt="Recoil" rank="silver" />
+          <SkillIcon alt="GSAP" rank="silver" />
+          <SkillIcon alt="Motion" rank="bronze" />
+          <SkillIcon alt="MaterialUI" rank="bronze" />
+          <SkillIcon alt="Vuetify" rank="bronze" />
+          <SkillIcon alt="jQuery" rank="gold" />
         </SkillFolder>
 
         <SkillFolder title="言語">
-          <SkillIcon alt="HTML5" rank="rainbow" showText={showText} />
-          <SkillIcon alt="CSS3" rank="rainbow" showText={showText} />
-          <SkillIcon alt="JavaScript" rank="rainbow" showText={showText} />
-          <SkillIcon alt="TypeScript" rank="gold" showText={showText} />
-          <SkillIcon alt="Python" showText={showText} />
-          <SkillIcon alt="PHP" rank="gold" showText={showText} />
-          <SkillIcon alt="Java" rank="silver" showText={showText} />
-          <SkillIcon alt="Lua" showText={showText} />
-          <SkillIcon alt="C" showText={showText} />
-          <SkillIcon alt="C++" showText={showText} />
-          <SkillIcon alt="C#" showText={showText} />
+          <SkillIcon alt="HTML5" rank="rainbow" />
+          <SkillIcon alt="CSS3" rank="rainbow" />
+          <SkillIcon alt="JavaScript" rank="rainbow" />
+          <SkillIcon alt="TypeScript" rank="gold" />
+          <SkillIcon alt="Python" />
+          <SkillIcon alt="PHP" rank="gold" />
+          <SkillIcon alt="Java" rank="silver" />
+          <SkillIcon alt="Lua" />
+          <SkillIcon alt="C" />
+          <SkillIcon alt="C++" />
+          <SkillIcon alt="C#" />
         </SkillFolder>
 
         <SkillFolder title="CSS">
-          <SkillIcon alt="TailwindCSS" rank="gold" showText={showText} />
-          <SkillIcon alt="Emotion" rank="gold" showText={showText} />
-          <SkillIcon alt="styled-components" showText={showText} />
-          <SkillIcon alt="CSSModules" showText={showText} />
-          <SkillIcon alt="Saas" rank="gold" showText={showText} />
-          <SkillIcon alt="Bootstrap" rank="silver" showText={showText} />
+          <SkillIcon alt="TailwindCSS" rank="gold" />
+          <SkillIcon alt="Emotion" rank="gold" />
+          <SkillIcon alt="styled-components" />
+          <SkillIcon alt="CSSModules" />
+          <SkillIcon alt="Saas" rank="gold" />
+          <SkillIcon alt="Bootstrap" rank="silver" />
         </SkillFolder>
 
         <SkillFolder title="テスト">
-          <SkillIcon alt="Storybook" rank="silver" showText={showText} />
-          <SkillIcon alt="Jest" rank="silver" showText={showText} />
-          <SkillIcon alt="Vitest" rank="silver" showText={showText} />
-          <SkillIcon alt="PHPUnit" rank="silver" showText={showText} />
-          <SkillIcon alt="Postman" rank="silver" showText={showText} />
+          <SkillIcon alt="Storybook" rank="silver" />
+          <SkillIcon alt="Jest" rank="silver" />
+          <SkillIcon alt="Vitest" rank="silver" />
+          <SkillIcon alt="PHPUnit" rank="silver" />
+          <SkillIcon alt="Postman" rank="silver" />
         </SkillFolder>
 
         <SkillFolder title="ビルドツール">
-          <SkillIcon alt="Vite" rank="gold" showText={showText} />
-          <SkillIcon alt="webpack" rank="bronze" showText={showText} />
+          <SkillIcon alt="Vite" rank="gold" />
+          <SkillIcon alt="webpack" rank="bronze" />
         </SkillFolder>
 
         <SkillFolder title="DB">
-          <SkillIcon alt="MySQL" rank="gold" showText={showText} />
-          <SkillIcon alt="PostgreSQL" rank="silver" showText={showText} />
+          <SkillIcon alt="MySQL" rank="gold" />
+          <SkillIcon alt="PostgreSQL" rank="silver" />
         </SkillFolder>
 
         <SkillFolder title="インフラ">
-          <SkillIcon alt="AWS" rank="bronze" showText={showText} />
-          <SkillIcon alt="Cloudflare" showText={showText} />
-          <SkillIcon alt="GCP" rank="bronze" showText={showText} />
-          <SkillIcon alt="Docker" rank="gold" showText={showText} />
-          <SkillIcon alt="Kubernetes" rank="silver" showText={showText} />
-          <SkillIcon alt="microCMS" showText={showText} />
+          <SkillIcon alt="AWS" rank="bronze" />
+          <SkillIcon alt="Cloudflare" />
+          <SkillIcon alt="GCP" rank="bronze" />
+          <SkillIcon alt="Docker" rank="gold" />
+          <SkillIcon alt="Kubernetes" rank="silver" />
+          <SkillIcon alt="microCMS" />
         </SkillFolder>
 
         <SkillFolder title="プロジェクト管理">
-          <SkillIcon alt="Git" rank="gold" showText={showText} />
-          <SkillIcon alt="GitHub" rank="gold" showText={showText} />
-          <SkillIcon alt="BitBucket" rank="silver" showText={showText} />
-          <SkillIcon alt="Redmine" rank="gold" showText={showText} />
-          <SkillIcon alt="Confluence" rank="silver" showText={showText} />
+          <SkillIcon alt="Git" rank="gold" />
+          <SkillIcon alt="GitHub" rank="gold" />
+          <SkillIcon alt="BitBucket" rank="silver" />
+          <SkillIcon alt="Redmine" rank="gold" />
+          <SkillIcon alt="Confluence" rank="silver" />
         </SkillFolder>
       </section>
     </div>

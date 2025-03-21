@@ -1,14 +1,14 @@
 import React from 'react';
 import { iconMap } from '~/components/iconMap';
+import SkillIconTitle from './SkillIconTitle';
 
 interface SkillProps {
   className?: string;
   alt: string;
   rank?: 'rainbow' | 'gold' | 'silver';
-  showText: boolean;
 }
 
-const SkillIcon: React.FC<SkillProps> = ({ className = '', alt, rank, showText }) => {
+const SkillIcon: React.FC<SkillProps> = ({ className = '', alt, rank }) => {
   const image = iconMap[alt] || '';
   const isIconAvailable = !!iconMap[alt];
   const rankClass = rank ? `bg-${rank}` : 'bg-gray-300/25';
@@ -32,13 +32,7 @@ const SkillIcon: React.FC<SkillProps> = ({ className = '', alt, rank, showText }
           className={`block h-[50px] w-[50px] flex-shrink-0 rounded-xl bg-gray-500 opacity-50 ${className}`}
         />
       )}
-      <span
-        className={`z-2 flex h-[50px] w-[50px] items-center justify-center text-center text-[0.7rem] leading-none break-all transition duration-250 ${className} ${
-          showText ? '' : '-translate-x-5 opacity-0'
-        }`}
-      >
-        {alt}
-      </span>
+      <SkillIconTitle title={alt} />
     </li>
   );
 };
