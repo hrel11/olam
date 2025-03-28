@@ -9,6 +9,7 @@ import Emotion from '~/assets/skills/css/Emotion-Dark.svg';
 import Saas from '~/assets/skills/css/Sass.svg';
 import StyledComponents from '~/assets/skills/css/StyledComponents.svg';
 import TailwindCSS from '~/assets/skills/css/TailwindCSS-Dark.svg';
+import UnoCSS from '~/assets/skills/css/UnoCSS.svg';
 import Bootstrap from '~/assets/skills/css/Bootstrap.svg';
 import CSSModules from '~/assets/skills/css/cssmodules.png';
 
@@ -87,6 +88,7 @@ export const iconMap: { [key: string]: ImageMetadata } = {
   Saas: Saas,
   'styled-components': StyledComponents,
   TailwindCSS: TailwindCSS,
+  UnoCSS: UnoCSS,
   Bootstrap: Bootstrap,
   CSSModules: CSSModules,
 

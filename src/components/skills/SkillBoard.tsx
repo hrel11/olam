@@ -57,6 +57,7 @@ const SkillBoard: React.FC = () => {
         </SkillFolder>
 
         <SkillFolder title="CSS">
+          <SkillIcon alt="UnoCSS" />
           <SkillIcon alt="TailwindCSS" rank="gold" />
           <SkillIcon alt="Emotion" rank="gold" />
           <SkillIcon alt="styled-components" />
