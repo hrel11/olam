@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "command": "./node_modules/.bin/astro dev",
+      "name": "Development server",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "name": "Debug Frontend",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:4321",
+      "webRoot": "/var/web/workspaces/src",
+      "sourceMaps": true
+    },
+    {
+      "name": "Debug Backend and Frontend",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "/var/web/workspaces",
+      "serverReadyAction": {
+        "action": "startDebugging",
+        "pattern": "Local: +https?://.+",
+        "name": "Debug Frontend"
+      }
+    }
+  ]
+}
