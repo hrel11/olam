@@ -4,6 +4,7 @@ import webpack from '~/assets/skills/build/Webpack-Dark.svg';
 import Discord from '~/assets/skills/communication/Discord.svg';
 import Redmine from '~/assets/skills/communication/redmine.png';
 import Confluence from '~/assets/skills/communication/confluence.png';
+import Notion from '~/assets/skills/communication/notion.png';
 
 import Emotion from '~/assets/skills/css/Emotion-Dark.svg';
 import Saas from '~/assets/skills/css/Sass.svg';
@@ -151,6 +152,7 @@ export const iconMap: { [key: string]: ImageMetadata } = {
   GitHub: GitHub,
   Redmine: Redmine,
   Confluence: Confluence,
+  Notion: Notion,
 
   Astro: Astro,
   Laravel: Laravel,

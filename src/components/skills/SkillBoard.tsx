@@ -96,6 +96,7 @@ const SkillBoard: React.FC = () => {
         <SkillFolder title="プロジェクト管理">
           <SkillIcon alt="Git" rank="gold" />
           <SkillIcon alt="GitHub" rank="gold" />
+          <SkillIcon alt="Notion" />
           <SkillIcon alt="BitBucket" rank="silver" />
           <SkillIcon alt="Redmine" rank="gold" />
           <SkillIcon alt="Confluence" rank="silver" />
