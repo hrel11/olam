@@ -11,11 +11,11 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.1",
+    "@astrojs/react": "^4.2.3",
     "@tailwindcss/vite": "^4.0.3",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
-    "astro": "^5.5.4",
+    "astro": "^5.6.1",
     "dotenv": "^16.4.7",
     "gsap": "^3.12.7",
     "jotai": "^2.12.2",
