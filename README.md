@@ -6,8 +6,15 @@ portfolio website with Astro
 
 TypeScript/Astro/React/TailwindCSS/GSAP/Vite/ESLint/Prettier
 
-## usage
+## requirement
 
 Node.js 22.16.0~
+
+## usage
+
+```shell
+npm i
+npm run dev
+```
 
 Dockerコンテナ(node:23-alpine)での動作確認済
