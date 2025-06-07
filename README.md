@@ -2,6 +2,8 @@
 
 portfolio website with Astro
 
+略歴/スキルセット/リンク
+
 ## package
 
 TypeScript/Astro/React/TailwindCSS/GSAP/Vite/ESLint/Prettier
