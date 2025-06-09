@@ -1,6 +1,6 @@
 # about
 
-portfolio website with Astro
+frontend engineer portfolio website with Astro
 
 略歴/スキルセット/リンク
 
