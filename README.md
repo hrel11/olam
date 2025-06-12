@@ -29,3 +29,20 @@ npm run preview
 ```
 
 Dockerコンテナ(node:23-alpine)での動作確認済
+
+## structure
+
+```text
+/
+├── public/             # 静的ファイル（画像、favicon 等）
+├── src/
+│   ├── components/     # UI コンポーネント集
+│   ├── layouts/        # レイアウトテンプレート
+│   ├── pages/          # Astro ページ（.astro ファイル）
+│   ├── content/        # Markdown / MDX 記事
+│   └── data/           # サイト設定やプロフィール情報
+├── astro.config.mjs    # Astro の設定ファイル
+├── tailwind.config.cjs[#] or uno.config.ts  # スタイリング設定
+├── tsconfig.json       # TS 設定
+└── package.json        # スクリプトや依存定義
+```
