@@ -46,3 +46,8 @@ Dockerコンテナ(node:23-alpine)での動作確認済
 ├── tsconfig.json       # TS 設定
 └── package.json        # スクリプトや依存定義
 ```
+
+## feature
+
+- レスポンシブ対応
+- 略歴はmicroCMSから取得
