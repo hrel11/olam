@@ -12,13 +12,15 @@ TypeScript/Astro/React/TailwindCSS/GSAP/Vite/ESLint/Prettier
 
 Node.js 22.16.0~
 
+Dockerコンテナ(node:23-alpine)での動作確認済
+
 ## usage
 
 ```shell
-# 依存関係インストール
+# 依存関係のインストール
 npm i
 
-# 開発モードで起動
+# 開発モード
 npm run dev
 
 # ビルド
@@ -27,8 +29,6 @@ npm run build
 # ビルドのプレビュー
 npm run preview
 ```
-
-Dockerコンテナ(node:23-alpine)での動作確認済
 
 ## structure
 
