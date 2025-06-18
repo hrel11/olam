@@ -2,7 +2,7 @@
 
 A modern personal portfolio built with Astro and TypeScript
 
-略歴/スキルセット/リンク
+[略歴/スキルセット/リンク]
 
 ## package
 
@@ -20,7 +20,7 @@ Dockerコンテナ(node:23-alpine)での動作確認済
 # 依存関係のインストール
 npm i
 
-# 開発モード
+# 開発環境起動
 npm run dev
 
 # ビルド
