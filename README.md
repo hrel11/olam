@@ -36,10 +36,13 @@ npm run preview
 /
 ├── public/
 ├── src/
+│   ├── assets/
 │   ├── components/
 │   ├── layouts/
 │   ├── pages/
-│   └── data/
+│   ├── styles/
+│   ├── types/
+│   └── utils/
 ```
 
 ## feature
