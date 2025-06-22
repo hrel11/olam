@@ -47,5 +47,5 @@ npm run preview
 
 ## feature
 
-- レスポンシブ対応
+- レスポンシブデザイン対応
 - 略歴はmicroCMSから取得
