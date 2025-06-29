@@ -1,6 +1,6 @@
 # about
 
-A modern portfolio built with Astro and TypeScript
+portfolio built with Astro and TypeScript
 
 ## package
 
