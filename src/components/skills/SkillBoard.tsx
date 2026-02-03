@@ -5,8 +5,8 @@ import ToggleSwitchForSkillIcon from './ToggleSwitchForSkillIcon';
 
 const SkillBoard: React.FC = () => {
   return (
-    <div className="flex flex-col gap-4 [&>*]:self-start lg:[&>*]:self-auto">
-      <div className="flex flex-col gap-4 lg:flex-row lg:justify-between [&>*]:self-start">
+    <div className="flex flex-col gap-4 *:self-start lg:*:self-auto">
+      <div className="flex flex-col gap-4 *:self-start lg:flex-row lg:justify-between">
         <p>
           経験値が多いほど枠線が豪華になります
           <br />

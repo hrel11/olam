@@ -7,6 +7,7 @@ import 'dotenv/config';
 // https://astro.build/config
 export default defineConfig({
   vite: {
+    // @ts-expect-error - Vite plugin type mismatch between Astro and Tailwind
     plugins: [tailwindcss()],
     server: {
       host: true,

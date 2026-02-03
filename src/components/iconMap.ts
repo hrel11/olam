@@ -78,6 +78,7 @@ import NextJS from '~/assets/skills/webFramework/NextJS-Dark.svg';
 import NuxtJS from '~/assets/skills/webFramework/NuxtJS-Dark.svg';
 import Remix from '~/assets/skills/webFramework/Remix-Dark.svg';
 import VueJS from '~/assets/skills/webFramework/VueJS-Dark.svg';
+import Hono from '~/assets/skills/webFramework/Hono.png';
 
 export const iconMap: { [key: string]: ImageMetadata } = {
   Vite: Vite,
@@ -160,4 +161,5 @@ export const iconMap: { [key: string]: ImageMetadata } = {
   'Nuxt.js': NuxtJS,
   Remix: Remix,
   'Vue.js': VueJS,
+  Hono: Hono,
 };

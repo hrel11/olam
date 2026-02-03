@@ -10,12 +10,17 @@ import background from '~/assets/background.svg';
 <Layout
   title="hrel11 portfolio"
   description="フロントエンドエンジニアのポートフォリオ"
-  class="bg-blue-50"
+  class="bg-gray-300"
 >
   <Splash client:load />
-  <img class="fixed inset-0 -z-1 h-full w-full" src={background.src} alt="" fetchpriority="high" />
+  <img
+    class="fixed inset-0 -z-1 h-full w-full blur-sm"
+    src={background.src}
+    alt=""
+    fetchpriority="high"
+  />
   <main
-    class="m-auto flex max-w-6xl min-w-[330px] flex-col gap-10 overflow-x-hidden p-10 lg:grid lg:grid-cols-4 lg:grid-rows-4"
+    class="m-auto flex max-w-6xl min-w-82.5 flex-col gap-10 overflow-x-hidden p-10 lg:grid lg:grid-cols-4 lg:grid-rows-4"
   >
     <Profile id="profile" title="hrel11" class="lg:col-span-3 lg:col-start-1 lg:row-span-1" />
 

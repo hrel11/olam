@@ -5,7 +5,7 @@ import SkillIconTitle from './SkillIconTitle';
 interface SkillProps {
   className?: string;
   alt: string;
-  rank?: 'rainbow' | 'gold' | 'silver';
+  rank?: 'rainbow' | 'gold' | 'silver' | 'bronze';
 }
 
 const SkillIcon: React.FC<SkillProps> = ({ className = '', alt, rank }) => {
@@ -16,11 +16,11 @@ const SkillIcon: React.FC<SkillProps> = ({ className = '', alt, rank }) => {
 
   return (
     <li
-      className={`${hasBorder} ${rankClass} mb-[1em] flex h-[50px] w-[50px] flex-col items-center gap-1 rounded-2xl`}
+      className={`${hasBorder} ${rankClass} mb-[1em] flex h-12.5 w-12.5 flex-col items-center gap-1 rounded-2xl`}
     >
       {isIconAvailable ? (
         <img
-          className={`block flex-shrink-0 rounded-2xl border-5 border-white/0 align-baseline ${className}`}
+          className={`block shrink-0 rounded-2xl border-5 border-white/0 align-baseline ${className}`}
           loading="eager"
           alt={`${alt} icon`}
           src={image.src}
@@ -29,7 +29,7 @@ const SkillIcon: React.FC<SkillProps> = ({ className = '', alt, rank }) => {
         />
       ) : (
         <span
-          className={`block h-[50px] w-[50px] flex-shrink-0 rounded-xl bg-gray-500 opacity-50 ${className}`}
+          className={`block h-12.5 w-12.5 shrink-0 rounded-xl bg-gray-500 opacity-50 ${className}`}
         />
       )}
       <SkillIconTitle title={alt} />

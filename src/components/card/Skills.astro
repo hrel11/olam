@@ -1,10 +1,10 @@
 ---
 import BaseCard from './BaseCard.astro';
-import SkillBoard from '~/components/skills/SkillBoard';
+import SkillBoard from '~/components/skills/SkillBoard.astro';
 
 const { class: className, ...rest } = Astro.props;
 ---
 
 <BaseCard class={`${className}`} {...rest}>
-  <SkillBoard client:load />
+  <SkillBoard />
 </BaseCard>

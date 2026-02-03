@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": ["src/**/*.{astro,ts,tsx}", "astro.config.{js,mjs,ts}"],
+  "project": ["src/**/*.{astro,ts,tsx,js,jsx}"],
+  "ignore": ["dist/**", "node_modules/**", ".astro/**"],
+  "ignoreDependencies": ["tailwindcss", "@eslint/js"],
+  "astro": {
+    "entry": ["src/**/*.astro", "astro.config.{js,mjs,ts}"]
+  },
+  "eslint": true,
+  "prettier": true
+}

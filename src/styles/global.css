@@ -25,12 +25,6 @@ body {
   color: var(--color-main);
 }
 
-.bg-src-pages {
-  background:
-    linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-    linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-}
-
 .bg-bronze {
   background: linear-gradient(135deg, #f3cfb8, #a57e65);
 }

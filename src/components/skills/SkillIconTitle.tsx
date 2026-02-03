@@ -10,7 +10,7 @@ const SkillIconTitle = ({ title }: SkillIconTitleProps) => {
 
   return (
     <span
-      className={`z-2 flex h-[50px] w-[50px] items-center justify-center text-center text-[0.7rem] leading-none break-all transition duration-250 ${
+      className={`z-2 flex h-12.5 w-12.5 items-center justify-center text-center text-[0.7rem] leading-none break-all transition duration-250 ${
         showText ? '' : '-translate-x-5 opacity-0'
       }`}
     >
